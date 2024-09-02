@@ -1,0 +1,35 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+
+<nav>
+    <center>
+        @* <a class="btn btn-success mt-3" href="/Home/Index">Home</a> *@
+        @* @Html.ActionLink("Home","Index","Home") *@
+        <a class="btn btn-success mt-3" asp-controller="Home" asp-action="Index" asp-roue-id="10">Home</a>
+        <a class="btn btn-info mt-3" href="/Home/ContactUs">Contact Us</a>
+        <a class="btn btn-danger mt-3" href="/Account/Login">Login</a>
+        <a class="btn btn-danger mt-3" href="/Account/Register">Register</a>
+    </center>
+</nav>
+
+<body>
+    <div>
+        @RenderBody()
+    </div>
+</body>
+
+<footer class="fixed-bottom">
+    <div>
+        <center>
+            <p>CoppyRights &copy; @DateTime.Now.Year</p>
+        </center>
+    </div>
+</footer>
+</html>
